@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Livre d'or - REM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <img src="assets/logo-rem.jpg" alt="Logo REM" class="logo" />
+      <h1>Livre d’or</h1>
+      <p>Votre avis compte énormément pour moi.<br>Laissez un message, un mot, un ressenti.</p>
+      <a class="button" href="#formulaire">Laisser un message</a>
+    </section>
+
+    <section id="formulaire" class="card">
+      <h2>Laisser un message</h2>
+
+      <form id="guestbook-form">
+        <label>Votre nom ou pseudo</label>
+        <input name="nom" type="text" placeholder="Votre nom ou pseudo" required />
+
+        <label>Ville / Pays</label>
+        <input name="ville" type="text" placeholder="Ville / Pays" />
+
+        <label>Votre note</label>
+        <select name="note" required>
+          <option value="★★★★★">★★★★★</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+        </select>
+
+        <label>Votre message</label>
+        <textarea name="message" placeholder="Écrivez votre message ici..." required></textarea>
+
+        <button type="submit">Envoyer mon message</button>
+        <p id="status"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Messages</h2>
+      <p class="notice">Les messages seront visibles après validation.</p>
+
+      <div class="messages">
+        <article>
+          <strong>Merci pour votre soutien</strong>
+          <span>★★★★★</span>
+          <p>Les premiers messages validés apparaîtront ici.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="qr">
+      <h2>Retrouvez-moi</h2>
+      <img src="assets/qr-code.png" alt="QR Code Linktree REM" />
+      <p>Scannez pour accéder à tous mes liens.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

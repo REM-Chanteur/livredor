@@ -1,0 +1,22 @@
+LIVRE D'OR REM - MISE EN LIGNE GRATUITE
+
+1. Va sur GitHub avec ton compte : REM-Chanteur
+2. Crée un nouveau dépôt public nommé :
+   livredor
+
+3. Envoie tous les fichiers de ce dossier dans le dépôt.
+
+4. Va dans :
+   Settings > Pages
+
+5. Dans "Branch", choisis :
+   main / root
+
+6. Clique sur Save.
+
+Ton site sera disponible à l'adresse :
+https://REM-Chanteur.github.io/livredor/
+
+IMPORTANT :
+La page est prête visuellement.
+Pour enregistrer réellement les messages, il faudra connecter le formulaire à Google Sheets via Google Apps Script.

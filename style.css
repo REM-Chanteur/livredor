@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #191100, #000 55%);
+  color: white;
+}
+
+.page {
+  max-width: 980px;
+  margin: auto;
+  padding: 28px;
+}
+
+.hero {
+  text-align: center;
+  padding: 30px 10px 20px;
+}
+
+.logo {
+  width: 260px;
+  max-width: 85%;
+  border-radius: 12px;
+}
+
+h1 {
+  font-size: 64px;
+  color: #d9a72b;
+  margin: 10px 0;
+  font-family: Georgia, serif;
+}
+
+h2 {
+  color: #d9a72b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.card {
+  border: 1px solid #d9a72b;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 28px 0;
+  background: rgba(0,0,0,0.65);
+  box-shadow: 0 0 28px rgba(217,167,43,0.15);
+}
+
+label {
+  display: block;
+  color: #d9a72b;
+  margin: 18px 0 7px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  background: #080808;
+  color: white;
+  border: 1px solid #d9a72b;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 130px;
+}
+
+button, .button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 14px 24px;
+  background: linear-gradient(180deg, #ffe08a, #b77b00);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.messages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.messages article {
+  border: 1px solid rgba(217,167,43,0.55);
+  border-radius: 12px;
+  padding: 18px;
+  background: rgba(255,255,255,0.03);
+}
+
+.messages span {
+  color: #d9a72b;
+  display: block;
+  margin: 8px 0;
+}
+
+.notice {
+  color: #ccc;
+}
+
+.qr {
+  text-align: center;
+  margin: 38px 0;
+}
+
+.qr img {
+  width: 220px;
+  max-width: 70%;
+  background: white;
+  padding: 12px;
+}
+
+#status {
+  color: #d9a72b;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 44px; }
+  .page { padding: 16px; }
+}
