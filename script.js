@@ -1,27 +1,26 @@
-// Remplace cette adresse par l'URL de ton Google Apps Script si tu veux enregistrer les messages.
-const GOOGLE_SCRIPT_URL = "";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbytuAedn3CtcZw-8lPzTT9LqZcf9Un7qlq63I_YmpS508RyckUMEhLVp4ahdJRK4v5_oA/exec";
 
-document.getElementById("guestbook-form").addEventListener("submit", async function(e) {
-  e.preventDefault();
+document.getElementById("guestbook-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  const status = document.getElementById("status");
+    const status = document.getElementById("status");
+    const formData = new FormData(this);
 
-  if (!GOOGLE_SCRIPT_URL) {
-    status.textContent = "Message prêt, mais l'enregistrement n'est pas encore connecté.";
-    return;
-  }
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            body: formData
+        });
 
-  const formData = new FormData(e.target);
-
-  try {
-    await fetch(GOOGLE_SCRIPT_URL, {
-      method: "POST",
-      body: formData
-    });
-
-    status.textContent = "Merci, votre message a bien été envoyé.";
-    e.target.reset();
-  } catch (err) {
-    status.textContent = "Erreur d'envoi. Réessayez plus tard.";
-  }
+        if (response.ok) {
+            status.textContent = "Merci ! Votre message a été envoyé et sera publié après validation.";
+            status.style.color = "#4CAF50";
+            this.reset();
+        } else {
+            throw new Error();
+        }
+    } catch (err) {
+        status.textContent = "Erreur lors de l'envoi. Réessayez plus tard.";
+        status.style.color = "#ff4444";
+    }
 });
